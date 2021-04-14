@@ -2,23 +2,45 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Font Awesome -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-			crossorigin="anonymous"
-		/>
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="style.css" />
-		<title>Quote Generator</title>
-	</head>
-	<body>
-		<!-- JavaScript -->
-		<script src="./app.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Quote Generator</title>
+  </head>
+  <body>
+    <div class="ayah-container" id="ayah-container">
+      <!-- Ayah -->
+      <div class="ayah-text">
+        <i class="fas fa-quote-left"></i>
+        <span id="ayah"
+          >And when they are told, “Believe as others believe,” they reply,
+          “Will we believe as the fools believe?” Indeed, it is they who are
+          fools, but they do not know.</span
+        >
+      </div>
+      <p id="ayah-info">Al Quran - 2:13</p>
+      <div class="btn-container">
+        <button class="twitter-btn" id="twitter" title="Tweet This!">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <div class="btn-group">
+          <button class="active language" id="en">English</button>
+          <button class="language" id="bn">Bengali</button>
+        </div>
+        <button class="new-ayah" id="new-ayah">New Ayah</button>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="./app.js"></script>
+  </body>
 </html>
