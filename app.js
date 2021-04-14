@@ -4,6 +4,8 @@
 const newAyahBtn = document.getElementById('new-ayah');
 let bengali = document.getElementById('bn');
 let english = document.getElementById('en');
+let loader = document.querySelector('.loader-container');
+let ayahContainer = document.getElementById('ayah-container');
 let ayasInSura = [
 	7,
 	286,
@@ -124,6 +126,7 @@ let language = 'en';
 let tid = 20;
 // Fetching Data from API
 const getAyah = (language, tid) => {
+	loader.style.display = 'flex';
 	let randomSura = Math.floor(Math.random() * 114 + 1);
 	let randomAyah = Math.floor(
 		Math.random() * parseInt(ayasInSura[randomSura - 1]) + 1,
@@ -142,7 +145,7 @@ const showData = ({ verse }) => {
 	let verseNumber = document.getElementById('verse_number');
 	ayah.innerHTML = verse.translations[0].text;
 	verseNumber.innerHTML = verse.verse_key;
-
+	loader.style.display = 'none';
 	// console.log(verse, typeof verse);
 	// const {translate} = aya;
 };
@@ -163,7 +166,11 @@ english.addEventListener('click', () => {
 		language = 'en';
 		tid = 20;
 		bengali.classList.remove('active');
-		english.classList.active('active');
+		english.classList.add('active');
 		getAyah(language, tid);
 	}
+});
+
+window.addEventListener('load', () => {
+	loader.style.display = 'none';
 });
